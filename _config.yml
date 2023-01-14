@@ -19,10 +19,10 @@ sidebar:
     avatar: '[config.avatar](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
     title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   menu:
-    # post: '[btn.blog](/)'
-    # wiki: '[btn.wiki](/wiki/)'
+     post: '[btn.blog](/)'
+     wiki: '[btn.wiki](/wiki/)'
     # friends: '[友链](/friends/)'
-    # about: '[关于](/about/)'
+     about: '[关于](/about/)'
   # Sidebar widgets
   widgets:
     #### 自动生成的页面 ####
@@ -65,7 +65,7 @@ article:
   # 文章许可协议
   license: '本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
   # 分享
-  share: # [wechat, weibo, email, link]
+  share: [wechat, weibo, link]
   # 相关文章，需要安装插件 (for layout: post)
   # npm i hexo-related-popular-posts
   related_posts:
@@ -83,7 +83,7 @@ search:
 
 ######## Comments ########
 comments:
-  service: # beaudar, utterances, giscus, twikoo, waline, artalk
+  service: waline # beaudar, utterances, giscus, twikoo, waline, artalk
   # beaudar
   # https://beaudar.lipk.org/
   beaudar:
@@ -134,40 +134,20 @@ comments:
     js: https://unpkg.com/@waline/client@2.14.1/dist/waline.js
     css: https://unpkg.com/@waline/client@2.14.1/dist/waline.css
     # Waline server address url, you should set this to your own link
-    serverURL:
+    serverURL: https://waline-d3mds09vz-wwrrj.vercel.app/
     # If false, comment count will only be displayed in post page, not in home page
     commentCount: true
     # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
-    pageview: false
+    pageview: true
     # Custom emoji
-    # emoji:
-    #   - https://unpkg.com/@waline/emojis@1.1.0/weibo
-    #   - https://unpkg.com/@waline/emojis@1.1.0/alus
-    #   - https://unpkg.com/@waline/emojis@1.1.0/bilibili
-    #   - https://unpkg.com/@waline/emojis@1.1.0/qq
-    #   - https://unpkg.com/@waline/emojis@1.1.0/tieba
-    #   - https://unpkg.com/@waline/emojis@1.1.0/tw-emoji
-    #   - https://unpkg.com/@waline/emojis@1.1.0/bmoji
-    # 设置自己的图床服务，替换默认的 Base 64 编码嵌入（有体积大小限制），在评论中上传图片更加方便
-    # imageUploader:
-      # 适配了兰空图床V1、V2版本
-      # 以兰空图床V1为例，下列填写内容为：
-      # fileName: file
-      # tokenName: Authorization
-      # url: https://xxxxxx/api/v1/upload
-      # token: Bearer xxxxxxxxxxxxxx
-      # resp: data.links.url
-      # 以兰空图床V2为例，下列填写内容为：
-      # fileName: image
-      # tokenName: token
-      # url: https://xxxxxx/api/upload
-      # token: xxxxxxxxxxxxxx
-      # resp: data.url
-    #   fileName: # 根据版本二选一
-    #   tokenName: # 根据版本二选一
-    #   api: # 图床 api 地址
-    #   token: # 图床验证
-    #   resp: # 图片地址返回值的字段
+      #emoji: #https://unpkg.com/@waline/emojis@1.1.0/qq
+      # - https://unpkg.com/@waline/emojis@1.1.0/weibo
+      # - https://unpkg.com/@waline/emojis@1.1.0/alus
+      # - https://unpkg.com/@waline/emojis@1.1.0/bilibili
+      # - https://unpkg.com/@waline/emojis@1.1.0/qq
+      # - https://unpkg.com/@waline/emojis@1.1.0/tieba
+      # - https://unpkg.com/@waline/emojis@1.1.0/tw-emoji
+      # - https://unpkg.com/@waline/emojis@1.1.0/bmoji
   
   # Artalk
   # https://artalk.js.org/
@@ -182,32 +162,32 @@ comments:
 ######## Footer ########
 footer:
   social:
-    # github:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/>'
-    #   url: /
-    # music:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/3845874.svg"/>'
-    #   url: /
-    # unsplash:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/3616429.svg"/>'
-    #   url: /
-    # comments:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/>'
-    #   url: /about/#comments
+      github:
+        icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/>'
+        url: https://github.com/wwrrj
+      music:
+        icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/3845874.svg"/>'
+        url: https://music.163.com/#/user/home?id=548003745
+      #unsplash:
+      #  icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/3616429.svg"/>'
+      #  url: /
+      comments:
+        icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/>'
+        url: /about/#comments
   sitemap:
-    # '博客':
-    #   - '[近期](/)'
-    #   - '[分类](/)'
-    #   - '[标签](/)'
-    #   - '[归档](/)'
-    # '项目':
-    #   - '[开源库](/)'
-    # '社交':
-    #   - '[友链](/)'
-    #   - '[留言板](/)'
-    # '更多':
-    #   - '[关于本站](/)'
-    #   - '[GitHub](/)'
+      '博客':
+        - '[近期](/)'
+        - '[分类](/categories/)'
+        - '[标签](/tags/)'
+        - '[归档](/archives/)'
+      #'项目':
+      #  - '[开源库](/)'
+      #'社交':
+      #  - '[友链](/)'
+      #  - '[留言板](/)'
+      '更多':
+        - '[关于本站](/about/)'
+        - '[GitHub](https://github.com/wwrrj)'
   content: | # 支持 Markdown 格式
     本站由 [@anonymity](/) 使用 [Stellar](https://github.com/xaoxuu/hexo-theme-stellar) 主题创建。
     本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
@@ -377,7 +357,7 @@ style:
     loading: 正在加载
     error: 加载失败，请稍后重试。
   gradient: # https://webgradients.com/
-    start: 'linear-gradient(to right, hsl(215, 95%, 64%), hsl(195, 95%, 60%), hsl(165, 95%, 56%), hsl(165, 95%, 56%), hsl(195 95% 60%), hsl(215, 95%, 64%))'
+    start: 'linear-gradient(to right, #92fe9d 0%, #00c9ff 50%, #92fe9d 100%)'
     search: 'linear-gradient(to right, #04F3FF, #08FFC6, #DDF730, #FFBD19, #FF1FE0, #C418FF, #04F3FF)'
 
 default:
